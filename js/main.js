@@ -38,6 +38,7 @@ const searchWrapEl = headerEl.querySelector('.search-wrap');
 const searchCloserEl = searchWrapEl.querySelector('.search-closer');
 const shadowEl = searchWrapEl.querySelector('.shadow');
 const searchStarterEl = headerEl.querySelector('.search-starter');
+const searchInputEl = searchWrapEl.querySelector('input');
 const searchDelayEls = [...searchWrapEl.querySelectorAll('li')];
 
 searchStarterEl.addEventListener('click', showSearch);
@@ -53,6 +54,9 @@ function showSearch () {
     searchDelayEls.forEach((el, index) => {
         el.style.transitionDelay = index * .4 / searchDelayEls.length + 's';
     });
+    setTimeout(() => {
+        searchInputEl.focus();
+    }, 600);
 };
 
 function hideSearch () {
@@ -65,4 +69,5 @@ function hideSearch () {
         el.style.transitionDelay = index * .4 / searchDelayEls.length + 's';
     });
     searchDelayEls.reverse();
+    searchInputEl.value = '';
 };
