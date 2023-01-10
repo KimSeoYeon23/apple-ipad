@@ -6,6 +6,7 @@
     --text-color: #1d1d1d;
     --header-color: #3a3a3a;
     --dark-gray: #6e6e6e;
+    --middle-gray: #b7b7b7;
     --link-color: #0071e3;
     --link-focus-color: #81b9f1;
     --shadow-color: rgba(0, 0, 0, .4);
@@ -470,6 +471,12 @@ header .search .autocompletes ul li:hover a{
     color: var(--link-color);
 }
 
+header .clone-menu {
+    display: none;
+}
+
+/* Search Animation 
+스타일을 한 번에 지정*/
 header .search input,
 header .search .search-icon,
 header .search .autocompletes h3,
@@ -539,6 +546,96 @@ header.searching .search .autocompletes li {
         margin-bottom: 0;
     }
 
+    header .search-wrap {
+        padding: 0 20px 14px;
+        border-bottom: 1px solid var(--header-color);
+        box-sizing: border-box;
+        top: var(--header-h);
+    }
+
+    header .search {
+        max-width: 590px;
+    }
+
+    header .shadow {
+        display: none;
+    }
+
+    header .search .textfield {
+        border-radius: 10px;
+        background-color: var(--text-color);
+    }
+
+    header .search input, 
+    header .search .search-icon,
+    header .search .autocompletes h3,
+    header .search .autocompletes li {
+        transform: translate(0, 0);
+    }
+    
+    header .search .autocompletes {
+        top: 58px;
+        padding: 26px 0 20px;
+        background-color: transparent;
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+    header .search .autocompletes ul li{
+        border-bottom: 1px solid var(--header-color);
+    }
+
+    header .search .autocompletes ul li:last-child{
+        border-bottom: none;
+    }
+
+    header .search .autocompletes ul li a {
+        padding: 16px 0 16px 16px;
+        color: var(--middle-gray);
+    }
+
+    header .search .autocompletes ul li:hover a {
+        background-color: transparent;
+        color: var(--link-color);
+    }
+
+    header .clone-menu {
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 103px;
+        left: 0;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+        transition: .4s;
+        transform: translate(0, -50px);
+    }
+
+    header .clone-menu ul {
+        max-width: 590px;
+        margin: 4px auto;
+    }
+
+    header .clone-menu ul li {
+        border-bottom: 1px solid var(--header-color);
+    }
+
+    header .clone-menu ul li:last-child {
+        border-bottom: none;
+    }
+
+    header .clone-menu ul li a {
+        display: block;
+        padding: 16px 0;
+        font-size: 14px;
+        color: var(--middle-gray);
+    }
+    header .clone-menu ul li a:hover {
+        color: var(--white-color);
+    }
+
     header.menuing {
         background-color: #000;
     }
@@ -560,6 +657,17 @@ header.searching .search .autocompletes li {
 
     header.menuing ul.menu > li.menu-starter span:last-child {
         transform: translate(0, -3.5px) rotate(-45deg);
+    }
+
+    header.menuing .search-wrap {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    header.menuing .clone-menu {
+        transform: translate(0, 0);
+        visibility: visible;
+        opacity: 1;
     }
 }
 
