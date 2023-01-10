@@ -166,7 +166,7 @@ infoEls.forEach((info) => {
 // 비디오 재생
 const video = document.querySelector('.stage video');
 const playBtn = document.querySelector('.stage .controller--play');
-const pauseBtn = document.querySelector('.stage .controller-pause');
+const pauseBtn = document.querySelector('.stage .controller--pause');
 
 playBtn.addEventListener('click', () => {
     video.play();
