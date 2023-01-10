@@ -39,14 +39,17 @@ const headerEl = document.querySelector('header');
 const headerMenuEls = [...headerEl.querySelectorAll('ul.menu > li')];
 const searchWrapEl = headerEl.querySelector('.search-wrap');
 const searchCloserEl = searchWrapEl.querySelector('.search-closer');
-const shadowEl = searchWrapEl.querySelector('.shadow');
+const searchShadowEl = searchWrapEl.querySelector('.shadow');
 const searchStarterEl = headerEl.querySelector('.search-starter');
 const searchInputEl = searchWrapEl.querySelector('input');
 const searchDelayEls = [...searchWrapEl.querySelectorAll('li')];
 
 searchStarterEl.addEventListener('click', showSearch);
-searchCloserEl.addEventListener('click', hideSearch);
-shadowEl.addEventListener('click', hideSearch);
+searchCloserEl.addEventListener('click', (event) => {
+    event.stopPropagation();
+    hideSearch();
+});
+searchShadowEl.addEventListener('click', hideSearch);
 
 function showSearch () {
     headerEl.classList.add('searching');
@@ -89,12 +92,35 @@ const menuStarterEl = document.querySelector('header .menu-starter');
 menuStarterEl.addEventListener('click', () => {
     if (headerEl.classList.contains('menuing')) {
         headerEl.classList.remove('menuing');
+        searchInputEl.value = '';
         playScroll();
     } else {
         headerEl.classList.add('menuing');
         stopScroll();
     };
 });
+
+// 헤더 검색
+const searchTextFieldEl = document.querySelector('header .textfield');
+const searchCancelerEl = document.querySelector('header .search-canceler');
+searchTextFieldEl.addEventListener('click', () => {
+    headerEl.classList.add('searching--mobile');
+    searchInputEl.focus();
+});
+
+searchCancelerEl.addEventListener('click', () => {
+    headerEl.classList.remove('searching--mobile');
+});
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth <= 740) {
+        headerEl.classList.remove('searching');
+    } else {
+        headerEl.classList.remove('searching--mobile');
+    };
+});
+
+
 
 // 요소의 가시성 관찰
 const io = new IntersectionObserver((entries) => {
