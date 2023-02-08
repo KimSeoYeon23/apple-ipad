@@ -3,7 +3,7 @@
 
 [Apple Demo Site](https://apple-ipad-one.vercel.app/)  
 FastCampus 강의를 들으며 만든 사이트입니다.  
-![Slack Open Graph example](https://raw.githubusercontent.com/KimSeoYeon23/apple-ipad/main/__assets/반응형작업.png)
+![Result Image example](https://raw.githubusercontent.com/KimSeoYeon23/apple-ipad/main/__assets/반응형작업.png)
 <br/>
 <br/>
 
@@ -311,7 +311,7 @@ ipads.forEach((ipad) => {
 ```
 결과 페이지 -
   
-![Slack Open Graph example](https://raw.githubusercontent.com/KimSeoYeon23/apple-ipad/main/__assets/ipadsResult.png)
+![iPad Image example](https://raw.githubusercontent.com/KimSeoYeon23/apple-ipad/main/__assets/ipadsResult.png)
 <br/>
 <br/>
 
@@ -440,6 +440,6 @@ navigations.forEach((nav) => {
 ```
 결과 페이지 -
   
-![Slack Open Graph example](https://raw.githubusercontent.com/KimSeoYeon23/apple-ipad/main/__assets/navigationsResult.png)
+![Footer menu example](https://raw.githubusercontent.com/KimSeoYeon23/apple-ipad/main/__assets/navigationsResult.png)
 <br/>
 <br/>
