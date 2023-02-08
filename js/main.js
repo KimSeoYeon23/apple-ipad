@@ -206,6 +206,7 @@ ipads.forEach((ipad) => {
     itemsEl.append(itemEl);
 });
 
+// footer 메뉴
 const navigationsEl = document.querySelector('footer .navigations');
 navigations.forEach((nav) => {
     const mapEl = document.createElement('div');
