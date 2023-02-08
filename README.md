@@ -3,6 +3,7 @@
 
 [Apple Demo Site](https://apple-ipad-one.vercel.app/)  
 FastCampus 강의를 들으며 만든 사이트입니다.  
+![Slack Open Graph example](https://raw.githubusercontent.com/KimSeoYeon23/apple-ipad/main/__assets/반응형작업.png)
 <br/>
 <br/>
 
